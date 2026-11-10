@@ -3,7 +3,7 @@ namespace MyFirstApp;
 
 public partial class MainPage : ContentPage
 {
-    private double firstNumber = 0;
+    private double firstNumber;
     private string currentOperator = "";
     private bool isFirstDigit = true;
     private string operationHistory = "";
@@ -191,7 +191,7 @@ public partial class MainPage : ContentPage
     
     private void Backspace_OnClicked(object? sender, EventArgs e)
     {
-        string currentText = Screen.Text ?? "0";
+        string currentText = Screen.Text;
 
         if (currentText.Length <= 1)
         {
